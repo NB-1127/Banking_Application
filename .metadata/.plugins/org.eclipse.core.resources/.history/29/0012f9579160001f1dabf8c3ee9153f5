@@ -1,0 +1,10 @@
+package com.BankingAppSpringBoot.BankingApplication.services;
+
+import com.BankingAppSpringBoot.BankingApplication.dto.AccountDto;
+import com.BankingAppSpringBoot.BankingApplication.model.Account;
+
+public interface AccountService {
+
+	
+	AccountDto cretateAccount(AccountDto account);
+}

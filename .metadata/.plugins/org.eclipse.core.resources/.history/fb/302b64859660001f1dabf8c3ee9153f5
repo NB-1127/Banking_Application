@@ -1,0 +1,32 @@
+package com.BankingAppSpringBoot.BankingApplication.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.BankingAppSpringBoot.BankingApplication.dto.AccountDto;
+import com.BankingAppSpringBoot.BankingApplication.services.AccountService;
+
+@RestController
+@RequestMapping("/api/accounts")
+public class AccountController {
+	
+	private AccountService accountServices;
+	
+	
+	public AccountController(AccountService accountServices) {
+		super();
+		this.accountServices = accountServices;
+	}
+
+	// add account rest api
+	@PostMapping
+	public ResponseEntity<AccountDto> addAccount(@RequestBody AccountDto accountDto){
+		
+		return new ResponseEntity<AccountDto>(accountServices.cretateAccount(accountDto), HttpStatus.CREATED); 
+	}
+
+}

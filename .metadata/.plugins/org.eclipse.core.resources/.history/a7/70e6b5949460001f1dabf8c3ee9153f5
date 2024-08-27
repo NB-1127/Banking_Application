@@ -1,0 +1,5 @@
+package com.BankingAppSpringBoot.BankingApplication.controller;
+
+public class AccountController {
+
+}

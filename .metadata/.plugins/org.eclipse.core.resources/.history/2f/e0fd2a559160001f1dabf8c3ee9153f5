@@ -1,0 +1,9 @@
+package com.BankingAppSpringBoot.BankingApplication.services;
+
+import com.BankingAppSpringBoot.BankingApplication.model.Account;
+
+public interface AccountService {
+
+	
+	Account cretateAccount(Account account);
+}

@@ -1,0 +1,5 @@
+package com.BankingAppSpringBoot.BankingApplication.services;
+
+public interface AccountService {
+
+}

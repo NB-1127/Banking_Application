@@ -1,0 +1,13 @@
+package com.BankingAppSpringBoot.BankingApplication.services;
+
+import com.BankingAppSpringBoot.BankingApplication.dto.AccountDto;
+
+public interface AccountService {
+
+	
+	AccountDto cretateAccount(AccountDto account);
+	
+	AccountDto getAccountById(Long id);
+	
+	AccountDto deposit(Long id, double amount);
+}

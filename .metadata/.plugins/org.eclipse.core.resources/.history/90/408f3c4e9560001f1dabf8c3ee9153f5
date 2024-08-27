@@ -1,0 +1,20 @@
+package com.BankingAppSpringBoot.BankingApplication.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.BankingAppSpringBoot.BankingApplication.dto.AccountDto;
+import com.BankingAppSpringBoot.BankingApplication.services.AccountService;
+
+@RestController
+@RequestMapping("/api/accounts")
+public class AccountController {
+	
+	private AccountService accountServices;
+	public ResponseEntity<AccountDto> addAccount(AccountDto accountDto){
+		
+		return new 
+	}
+
+}

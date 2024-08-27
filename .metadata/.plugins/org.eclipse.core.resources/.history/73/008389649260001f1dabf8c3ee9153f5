@@ -1,0 +1,5 @@
+package com.BankingAppSpringBoot.BankingApplication.mapper;
+
+public class AccountMapper {
+
+}

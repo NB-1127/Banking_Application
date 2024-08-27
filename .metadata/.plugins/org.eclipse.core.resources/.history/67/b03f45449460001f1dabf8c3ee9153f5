@@ -1,0 +1,30 @@
+package com.BankingAppSpringBoot.BankingApplication.services.impl;
+
+import com.BankingAppSpringBoot.BankingApplication.dto.AccountDto;
+import com.BankingAppSpringBoot.BankingApplication.mapper.AccountMapper;
+import com.BankingAppSpringBoot.BankingApplication.model.Account;
+import com.BankingAppSpringBoot.BankingApplication.repository.AccountRepository;
+import com.BankingAppSpringBoot.BankingApplication.services.AccountService;
+
+public class AccountServiceImpl implements AccountService{
+
+	
+	 private AccountRepository accountRepository;
+	 
+	 
+	public AccountServiceImpl(AccountRepository accountRepository) {
+		super();
+		this.accountRepository = accountRepository;
+	}
+
+
+	@Override
+	public AccountDto cretateAccount(AccountDto accountDto) {
+		// TODO Auto-generated method stub
+		Account account=AccountMapper.maptoAccount (accountDto); 
+		accountRepository.save(account);
+		return null;
+		
+	}
+
+}
